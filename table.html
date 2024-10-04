@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <meta http-equiv="Content-Language" content="ru">
+    <meta name="Description" content="Лабораторная работа 3: Таблицы, графика и ссылки">
+    <meta name="Keywords" content="HTML, таблицы, изображения, ссылки">
+    <meta name="Author" content="Шевченко Ю.А.">
+    <title>Лабораторная работа 3</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">На главную</a></li>
+                    <li><a href="anketa_post.html">Анкета (POST)</a></li>
+                    <li><a href="anketa_get.html">Анкета (GET)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <h1>Лабораторная работа 3</h1>
+            <h2>Таблица с данными</h2>
+
+            <!-- Пример таблицы с атрибутами -->
+            <table>
+              <thead>
+                  <tr>
+                      <th colspan="4">Заголовок над таблицей</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Заголовок центрирован по умолчанию</td>
+                      <td colspan="2">Заголовок, объединяющий столбцы</td>
+                      <td rowspan="2">Ячейка с размахом на 2 строки</td>
+                  </tr>
+                  <tr>
+                      <td class="red-bg">Ячейка с красным фоном</td>
+                      <td colspan="2">Ячейка, имеющая размах на 2 столбца</td>
+                  </tr>
+                  <tr>
+                      <td class="blue-border">Ячейка с синей рамкой</td>
+                      <td>Ячейка 1</td>
+                      <td>Ячейка 2</td>
+                      <td>Ячейка 3</td>
+                  </tr>
+              </tbody>
+            </table>
+
+            <h2>Изображение</h2>
+            <!-- Вставка изображения -->
+            <img src="images/family_tree.png" alt="Семейное дерево" width="300" height="200" align="center">
+
+            <h2>Ссылки</h2>
+            <!-- Пример ссылки на email -->
+            <p><a href="mailto:example@mail.com">Отправить письмо автору</a></p>
+
+            <!-- Пример якоря и ссылки на якорь -->
+            <a name="bottom_section"></a>
+            <p><a href="#top_section">Наверх страницы</a></p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Лабораторная работа выполнена Шевченко Ю.А.</p>
+        </div>
+    </footer>
+</body>
+</html>
