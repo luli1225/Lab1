@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Кодировка для отображения русского текста -->
+    <meta charset="UTF-8">
+    <!-- Мета-данные для адаптивности страницы на мобильных устройствах -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ссылка на стили -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Описание страницы -->
+    <meta name="description" content="Анкета пользователя (GET)">
+    <!-- Ключевые слова для SEO -->
+    <meta name="keywords" content="Анкета">
+    <!-- Имя автора -->
+    <meta name="author" content="Шевченко Ю.А.">
+    <title>Анкета (GET)</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <ul>
+                    <!-- Ссылка на главную страницу -->
+                    <li><a href="index.html">На главную</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="main">
+        <div class="container">
+            <h1>Анкета</h1>
+            <!-- Форма отправляется методом POST на указанный URL -->
+            <form action="/internet/test/form.php" method="GET">
+                <br>
+                <!-- Поле для ввода фамилии -->
+                Фамилия: <input type="text" name="lastname" value="Шевченко" required><br>
+
+                <!-- Поле для ввода имени -->
+                Имя: <input type="text" name="firstname" value="Юрий" required><br>
+
+                <!-- Поле для ввода отчества -->
+                Отчество: <input type="text" name="middlename" value="Андреевич" required><br>
+
+                <!-- Поле для ввода email -->
+                E-mail: <input type="email" name="email" value="example@mail.com" required><br>
+              
+                <!-- Выпадающий список выбора страны -->
+                Выбор страны:
+                <select name="country" required>
+                    <option value="russia" selected>Россия</option>
+                    <option value="usa">США</option>
+                    <option value="canada">Канада</option>
+                    <option value="germany">Германия</option>
+                    <option value="france">Франция</option>
+                    <option value="japan">Япония</option>
+                    <option value="china">Китай</option>
+                    <option value="india">Индия</option>
+                    <option value="uk">Великобритания</option>
+                    <option value="brazil">Бразилия</option>
+                </select><br>
+              
+                <!-- Радио-кнопки выбора города -->
+                Выбор города:<br>
+                <input type="radio" name="city" value="moscow" checked> Москва<br>
+                <input type="radio" name="city" value="spb"> Санкт-Петербург<br>
+                <input type="radio" name="city" value="kazan"> Казань<br>
+                <input type="radio" name="city" value="novosibirsk"> Новосибирск<br>
+                <input type="radio" name="city" value="sochi"> Сочи<br>
+
+                <!-- Чекбоксы для выбора языка -->
+                Выбор языка:<br>
+                <input type="checkbox" name="langru" value="ru" checked> Русский<br>
+                <input type="checkbox" name="langen" value="en"> Английский<br>
+                <input type="checkbox" name="langfr" value="fr"> Французский<br>
+                <input type="checkbox" name="langde" value="de"> Немецкий<br>
+                <input type="checkbox" name="langes" value="es"> Испанский<br>
+
+                <!-- Множественный выбор профессий -->
+                Выбор профессии:
+                <select name="profession[]" multiple required>
+                    <option value="programmer" selected>Программист</option>
+                    <option value="teacher">Учитель</option>
+                    <option value="designer">Дизайнер</option>
+                    <option value="doctor">Врач</option>
+                    <option value="engineer">Инженер</option>
+                    <option value="manager">Менеджер</option>
+                    <option value="lawyer">Юрист</option>
+                    <option value="scientist">Ученый</option>
+                    <option value="writer">Писатель</option>
+                    <option value="artist">Художник</option>
+                </select><br>
+
+                <!-- Поле для ввода пароля -->
+                Пароль: <input type="password" name="password" required><br>
+
+                <!-- Поле для ввода дополнительной информации -->
+                Дополнительная информация:<br>
+                <textarea name="additional_info" rows="5" cols="30">Информация о вас</textarea><br>
+
+                <!-- Скрытое поле, передающее имя пользователя -->
+                <input type="hidden" name="student" value="Юрий">
+
+                <!-- Кнопка отправки формы на сервер -->
+                <button type="submit">Отправить</button>
+
+                <!-- Кнопка для очистки формы -->
+                <button type="reset">Очистить</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
